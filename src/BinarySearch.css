@@ -1,0 +1,210 @@
+/* BinarySearchApp Styles */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #d1c4e9);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+input,
+select {
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 10px;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.4);
+  outline: none;
+}
+
+.button,
+.search-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s ease, transform 0.2s ease-in-out, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+}
+
+.button {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  color: white;
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #27ae60, #1f8851);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+  transform: scale(1.02);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-btn {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+}
+
+.search-btn:hover {
+  background: linear-gradient(135deg, #2980b9, #1c5983);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.search-btn:active {
+  transform: scale(1.02);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-btn:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.4);
+}
+
+table {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 12px 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+th {
+  background-color: #3498db;
+  color: white;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+  background-color: #fafafa;
+}
+
+tr:hover {
+  background-color: #ecf0f1;
+  transform: scale(1.01);
+  transition: background-color 0.3s ease;
+}
+
+.array-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.array-item {
+  padding: 12px 18px;
+  border: 1px solid #3498db;
+  border-radius: 8px;
+  background-color: #ecf0f1;
+  font-size: 18px;
+  font-weight: bold;
+  min-width: 45px;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.array-item:hover {
+  transform: scale(1.05);
+  background-color: #f0f9f9;
+}
+
+.array-item.mid {
+  background-color: #f39c12;
+  color: white;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #2c3e50;
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.array-item {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
+}
+
+.array-item.mid {
+  background-color: rgb(248, 173, 9); /* Подсветка текущего элемента */
+}
+
+.array-item.visited {
+  background-color: lightgreen; /* Подсветка проверенных элементов */
+}
+
+.array-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.search-input {
+  margin-left: 10px;
+}
