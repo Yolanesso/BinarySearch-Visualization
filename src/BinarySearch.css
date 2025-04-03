@@ -208,3 +208,26 @@ label {
 .search-input {
   margin-left: 10px;
 }
+
+.array-item {
+  margin: 5px;
+  border: 1px solid #d1d5db; /* Серый бордер */
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.mid {
+  background-color: #f59e0b; /* Тёплый оранжевый */
+  font-weight: bold;
+  color: white;
+}
+
+.visited {
+  background-color: #10b981; /* Сочный зелёный */
+  color: white;
+}
+
+.active-range {
+  background-color: #93c5fd; /* Мягкий голубой */
+  border: 2px solid #3b82f6; /* Яркая синяя граница */
+}

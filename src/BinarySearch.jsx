@@ -10,6 +10,8 @@ const BinarySearch = () => {
   const [result, setResult] = useState(null);
   const [searchPath, setSearchPath] = useState([]);
   const [currentMid, setCurrentMid] = useState(null);
+  const [currentLeft, setCurrentLeft] = useState(null);
+  const [currentRight, setCurrentRight] = useState(null);
 
   const binarySearchIterative = async (arr, key) => {
     let left = 0;
@@ -20,6 +22,8 @@ const BinarySearch = () => {
     while (left <= right) {
       const mid = Math.floor((left + right) / 2);
       setCurrentMid(mid);
+      setCurrentLeft(left); // <-- Добавлено
+      setCurrentRight(right); // <-- Добавлено
       await new Promise((resolve) => setTimeout(resolve, 2000));
 
       path.push(arr[mid]);
@@ -33,9 +37,6 @@ const BinarySearch = () => {
         right = mid - 1;
       }
     }
-
-    setSearchPath(path);
-    return { element: null, index: -1, comparisons };
   };
 
   const handleSearch = async () => {
@@ -49,6 +50,8 @@ const BinarySearch = () => {
     setResult(null);
     setSearchPath([]);
     setCurrentMid(null);
+    setCurrentLeft(null); // <-- Сброс
+    setCurrentRight(null); // <-- Сброс
 
     const searchResult = await binarySearchIterative(array, key);
     setResult(searchResult);
@@ -71,7 +74,16 @@ const BinarySearch = () => {
             <span
               key={index}
               className={`array-item ${
-                index === currentMid ? 'mid' : searchPath.includes(num) ? 'visited' : ''
+                index === currentMid
+                  ? 'mid'
+                  : searchPath.includes(num)
+                  ? 'visited'
+                  : currentLeft !== null &&
+                    currentRight !== null &&
+                    index >= currentLeft &&
+                    index <= currentRight
+                  ? 'active-range'
+                  : ''
               }`}
               style={{ fontSize: '28px', padding: '10px' }}
             >
